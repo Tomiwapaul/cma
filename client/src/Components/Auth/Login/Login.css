@@ -1,0 +1,39 @@
+.login-wrapper{
+   box-shadow: 0 0 8px lightgray;
+    display: grid;
+    row-gap: 1rem;
+    text-transform: capitalize;
+    width:30%;
+    margin: 2rem auto;
+    padding: 1rem;
+
+}
+
+.login-wrapper > div {
+   
+}
+.login-heading{
+    font-size: 35px;
+    text-align: center;
+    background-color:rgba(246,241,241,0.997);
+}
+.login-form-wrapper{
+    display: grid;
+    row-gap: 1rem;
+
+}
+.login-rows{
+    display: grid;
+}
+.login-rows input,
+.login-rows select 
+.login-rows button{
+    padding: .5rem;
+}
+.login-rows button {
+    background-color: rgb(17, 76, 12);
+    color: white;
+    border: none;
+    text-transform: capitalize;
+    height: 2rem;
+}

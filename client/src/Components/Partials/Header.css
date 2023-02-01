@@ -1,0 +1,24 @@
+.main-nav-wrapper{
+    /* border: 1.5px solid gray; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 0 8px lightgray;
+}
+.nav-grp-links{
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.nav-grp-links a{
+    text-decoration: none;
+ 
+}
+.get-started-btn {
+    background-color: rgb(32, 104, 32);
+    color: white;
+    padding: 8px 12px;
+}
