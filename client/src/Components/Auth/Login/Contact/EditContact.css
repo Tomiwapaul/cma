@@ -1,0 +1,22 @@
+.edit-contact-wrapper{
+    text-align: center;
+    padding-top: 8rem;
+}
+input{
+    height: 2rem;
+    width: 25rem;
+    border-radius: 8px;
+}
+button{
+    height: 2rem;
+    width: 25rem;
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+}
+.name-edit{
+    background-color: rgb(164, 161, 158);
+    width:25rem ;
+    margin: auto;
+    border-radius: 8px;
+}
