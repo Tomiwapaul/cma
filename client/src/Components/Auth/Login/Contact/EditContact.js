@@ -1,34 +1,51 @@
-import React from 'react'
-import "./EditContact.css"
-const EditContact = () => {
+import React from "react";
+// import "./EditContact.css";
+import { FaRegArrowAltCircleLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
+const AddContact = () => {
   return (
-    <div className="edit-contact-wrapper">
-      <h2 className='name-edit'>Edit Contact</h2><br/><br/>
-      <div className="edit-grp-1">
-        <input type="text" placeholder="first name" />
-      </div>
-      <br />
-
-      <div className="edit-grp-2">
-        <input type="text" placeholder="last name" />
-      </div>
-      <br />
-
-      <div className="edit-grp-3">
-        <input type="text" placeholder="phone" />
-      </div>
-      <br />
-
-      <div className="edit-grp-4">
-        <input type="email" placeholder="email" />
-      </div>
-      <br />
-
-      <div className="edit-rows">
-        <button type="submit">Update Contact</button>
-      </div>
+    <div className="page-wrapper">
+      <form action="" method="post">
+        <div className="page-section">
+          <div className="page-row-1">
+            <div className="page-row-1-a"> add contact</div>
+            <div className="page-row-1-b">
+              <Link to="/profile">
+                <FaRegArrowAltCircleLeft className="remove-padd" /> Back
+              </Link>
+            </div>
+          </div>
+          <div className="page-row-2">
+            {/* ----add contact starts here------------- */}
+            <div className="add-contact-wrapper">
+              <div className="input-grp">
+                <input type="text" placeholder="first name" />
+                <input type="text" placeholder="last name" />
+              </div>
+              <div className="input-grp">
+                <input type="text" placeholder="phone" />
+                <input type="email" placeholder="email" />
+              </div>
+              <div className="input-grp">
+                <select name="" id="">
+                  <option value="">Occupation</option>
+                </select>
+              </div>
+            </div>
+            {/* -----------add contact ends here------ */}
+          </div>
+          <div className="page-row-3">
+            <div className="page-row-3-a">
+              <Link to="/profile">cancel</Link>
+            </div>
+            <div className="page-row-3-b">
+              <input type="submit" value="Create" />
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   );
-}
+};
 
-export default EditContact
+export default AddContact;

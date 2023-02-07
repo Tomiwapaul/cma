@@ -1,0 +1,42 @@
+@import url(../../assets/css/page.css);
+.settings-wrapper{
+    border: 0.5px solid gray;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 4rem;
+    justify-items: center;
+    
+}
+.settings-wrapper div[class^="settings-col"] {
+ box-shadow: 0 0 4px;
+    background-color: rgb(233, 230, 226);
+    height: 15rem;
+
+}
+div[class^='settings-col'] > div:nth-child(1){
+font-size: 35px;
+}
+p{
+    margin-top: 2rem;
+}
+button{
+    margin-right: 2rem;
+    background-color: gray;
+    color: black;
+    height: 2rem;
+    width: 9rem;
+    border-radius: 10px ;
+    margin-bottom: 4rem;
+}
+.search-icon-grp{
+    font-size: 7rem;
+    margin-left: 2rem;
+}
+.edit-profile-row-1,
+.edit-profile-row-2,
+.edit-profile-row-3{
+    justify-content: center;
+}
+span{
+    margin-left: 2rem;
+}

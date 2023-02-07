@@ -46,45 +46,7 @@ background-color:blue;
 .page-row-2{
 
 }
-.add-contact-wrapper{
-    border: .5px dashed;
-    display: grid;
-    gap: 1rem;
-}
-.add-contact-wrapper .input-grp {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-}
-.add-contact-wrapper .input-grp input,
-.add-contact-wrapper .input-grp select{
-    padding: 8px 12px;
-}
+
 .page-row-3{
     align-items: center;
-}
-.page-row-3-a a{
-color: #2f2f2f;
-background-color: lightgray;
-padding: 8px 16px;
-border-radius: 5px;
-
-}
-.page-row-3-a a:hover{
-color: white;
-background-color:blue;
-}
-
-.page-row-3-b input {
-color: white;
-background-color: blue;
-border: none;
-padding: 8px 16px;
-border-radius: 5px;
-cursor: pointer;
-
-}
-.page-row-3-b input:hover{
-color: black;
-background-color:lightgray;
 }
