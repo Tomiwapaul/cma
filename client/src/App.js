@@ -13,6 +13,7 @@ import EditContact from './Components/Auth/Login/Contact/EditContact';
 import EditProfile from './Components/Profile/EditProfile';
 import ChangePassword from './Components/Profile/ChangePassword';
 import DeleteAccount from './Components/Profile/DeleteAccount';
+import AccountCreated from './Components/others/AccountCreated'
 function App() {
   return (
     <BrowserRouter>
@@ -21,8 +22,9 @@ function App() {
         <Routes>
           <Route index element={<Home />}/>
           <Route path="/signup"element={<Signup />}/>
+          <Route path="/account-created" element={<AccountCreated/>} />
           <Route path="/login"element={<Login/>}/>
-          <Route path="/profile"element={<Profile/>}/>
+          <Route path="/profile/:id"element={<Profile/>}/>
           <Route path="/profile/settings"element={<Settings/>}/>
           <Route path="/profile/edit"element={<EditProfile/>}/>
           <Route path="/profile/change-password"element={<ChangePassword/>}/>

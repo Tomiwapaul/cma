@@ -8,35 +8,28 @@
     
 }
 .settings-wrapper div[class^="settings-col"] {
- box-shadow: 0 0 4px;
-    background-color: rgb(233, 230, 226);
-    height: 15rem;
+display: grid;
+place-items: center;
+padding: 2rem;
+box-shadow: 0 0 8px lightgray;
 
 }
 div[class^='settings-col'] > div:nth-child(1){
 font-size: 35px;
 }
-p{
-    margin-top: 2rem;
+.settings-wrapper div[class$='row-2']{
+    
 }
-button{
-    margin-right: 2rem;
-    background-color: gray;
-    color: black;
-    height: 2rem;
-    width: 9rem;
-    border-radius: 10px ;
-    margin-bottom: 4rem;
+.settings-wrapper div[class$='row-2'] a{
+
 }
-.search-icon-grp{
-    font-size: 7rem;
-    margin-left: 2rem;
+.settings-wrapper div[class$='row-2'] a .settings-icon-grp{
+font-size: 10rem;
+color: rgb(60, 60, 139);
 }
-.edit-profile-row-1,
-.edit-profile-row-2,
-.edit-profile-row-3{
-    justify-content: center;
+.settings-wrapper div[class$='row-3'] a{
+color: black;
 }
-span{
-    margin-left: 2rem;
+.settings-wrapper div[class$='row-3'] a:hover{
+    text-decoration: underline;
 }
