@@ -1,21 +1,25 @@
 const express = require("express");
 const app = express();
-const dotenv = require("dotenv").config();
+require("dotenv").config();
+const cors = require("cors");
+const usersRouter = require("./routes/usersRoutes");
 
 const PORT = process.env.PORT;
+
+//middlewares
+app.use(express.json());
+app.use
+
+//apis
+app.use("/api/users", usersRouter);
+
+
 
 //home page route
 //get path
 app.get("/", (req, res) => {
   res.send("welcome to home page");
 });
-// get all users
-app.get('/users', (req, res) => {
-    res.send("all users");
-});
-
-
-
 
 
 // creating server
