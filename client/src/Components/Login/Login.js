@@ -11,29 +11,8 @@ const Login = () => {
   const HandleLogin = (e) => {
     e.preventDefault();
     console.log("starting login -------------")
- 
-    //validation
-    console.log(`Email:${email}`);
-    console.log(`Password:${password}`);
-
-
-    //authentication
-    //fake user details provided by server
-    const userDetails = {
-      id: 2,
-      email: 'ayotomiwa@gmail.com',
-      password: "123"
-    }
-    // if credentials match
-    if (email === userDetails.email && password === userDetails.password) {
-    //redirect to profile page
-      navigate(`/profile/${userDetails.id}`);
-    } else {
-      //if credentials dont work,redirect to  profile page
-      setError(`incorrect details`)
-      navigate( `/login`)
-}
   };
+
   return (
     <div className="login-wrapper">
       <div className="login-heading">login</div>

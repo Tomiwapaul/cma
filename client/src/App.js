@@ -5,11 +5,11 @@ import {BrowserRouter,Routes,Route } from 'react-router-dom'
 import Home from './Components/Home';
 import Header from './Components/Partials/Header';
 import NotFound from "./Components/Auth/NotFound";
-import Login from './Components/Auth/Login/Login';
+import Login from './Components/Login/Login';
 import Profile from './Components/Profile/Profile';
 import Settings from './Components/Profile/Settings';
-import AddContact from './Components/AddContact';
-import EditContact from './Components/Auth/Login/Contact/EditContact';
+import AddContact from './Components/Contact/AddContact';
+import EditContact from './Components/Contact/EditContact';
 import EditProfile from './Components/Profile/EditProfile';
 import ChangePassword from './Components/Profile/ChangePassword';
 import DeleteAccount from './Components/Profile/DeleteAccount';

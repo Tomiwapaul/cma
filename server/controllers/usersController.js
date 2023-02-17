@@ -7,7 +7,6 @@ const logInToken = require("../auth/logInToken");
 const verifyToken = require("../auth/verifyToken");
 require("dotenv").config();
 
-
 //@description register a user
 //method POST localhost:5000/api/users/register
 const registerUser = async (req, res) => {
@@ -17,16 +16,10 @@ const registerUser = async (req, res) => {
   const {
     firstName,
     lastName,
-    gender,
-    dateOfBirth,
-    country,
     state,
     city,
-    username,
     email,
-    phone,
     password,
-    photo,
   } = req.body;
 
   try {
@@ -47,16 +40,14 @@ const registerUser = async (req, res) => {
     const newUser = await UserModel.create({
       firstName,
       lastName,
-      gender,
-      dateOfBirth,
-      country,
+     
       state,
       city,
-      username,
+     
       email,
-      phone,
+     
       password: hashedPassword,
-      photo,
+    
     });
 
     //if user could not be created
@@ -164,19 +155,22 @@ const loginUser = async (req, res) => {
       //check if user is verified
       if (!foundUser.verified === true) {
       }
-      
-      let token =await logInToken(foundUser._id)
-      
-      req.user = foundUser;
-        req.session.loggedIn = true;
-        
-      res.status(200).json({
-        message: "User loggedin",
-        user: {
-          id: foundUser._id,
-            isLoggedIn: true,
-          token: token,
-        },
+
+      let token = await logInToken(foundUser._id);
+
+      req.session.user = {
+        isLoggedIn: true,
+        token: token,
+      };
+
+      req.session.save((err) => {
+        if (err) {
+          console.log(err.message);
+          res.status(500).send({ message: err.message });
+        } else {
+          //send token to front-end
+          res.status(200).send(req.session.user);
+        }
       });
     } else {
       res.staus(401).send({ message: "Invalid credenials" });
